@@ -24,3 +24,9 @@ the setup traffic lights.
 
 Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application.
+
+## Running a server
+```bash
+bin/cake server -H [our-server-ip] -p [port-number]
+```
+
