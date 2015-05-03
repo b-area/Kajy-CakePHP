@@ -18,7 +18,8 @@
     <!--   Big container   -->
     <div class="container">
         <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
+        
+	     <div class="col-sm-8 col-sm-offset-2 col-md-10 col-sm-offset-1">
 
             <!--      Wizard container        -->
             <div class="wizard-container">
@@ -34,11 +35,23 @@
                         	</h3>
                     	</div>
                     	<ul>
+	                    	<li><a href="#welcome" data-toggle="tab">Welcome</a></li>
                             <li><a href="#about" data-toggle="tab">About</a></li>
                             <li><a href="#account" data-toggle="tab">Account</a></li>
                             <li><a href="#address" data-toggle="tab">Address</a></li>
                         </ul>
+                        
+                     
                         <div class="tab-content">
+	                        
+	                        <div class="tab-pane" id="welcome">
+                              <div class="row">
+	                              <div class="col-md-8 col-md-offset-1">
+	                              <?php echo $this->Html->image('wizard/lemur.png'); ?>
+	                              </div>
+                              </div>
+                            </div>
+	                        
                             <div class="tab-pane" id="about">
                               <div class="row">
                                   <h4 class="info-text"> Let's start with the basic information</h4>
@@ -69,6 +82,7 @@
                                   </div>
                               </div>
                             </div>
+                            
                             <div class="tab-pane" id="account">
                                 <h4 class="info-text"> What are you doing? </h4>
                                 <div class="row">
@@ -168,44 +182,9 @@
 
      <div class="footer">
       <div class="container">
-             Made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>. Free download <a href="http://www.creative-tim.com/product/wizard">here.</a>
+             
       </div>
     </div>
-
-    <div class="fixed-plugin">
-        <div class="dropdown open">
-          <a href="#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"> </i>
-          </a>
-          <ul class="dropdown-menu">
-           <li class="active">
-                <a href="http://ct-freebies.herokuapp.com/wizard-demo-register">
-                   <?php echo $this->Html->image('wizard/thumb_register.png'); ?>
-                   Register user flow
-                </a>
-            </li>
-            <li>
-                <a href="http://ct-freebies.herokuapp.com/wizard-demo-list-boat">
-                    <?php echo $this->Html->image('wizard/thumb_list_boat.png'); ?>
-                   List your boat
-                </a>
-            </li>
-            <li>
-                <a href="http://ct-freebies.herokuapp.com/wizard-demo-list-place">
-                    <?php echo $this->Html->image('wizard/thumb_list_place.png'); ?>
-                   List your place
-                </a>
-            </li>
-           <li>
-                <a href="http://ct-freebies.herokuapp.com/wizard-components" target="_blank" class="btn btn-default btn-fill">How to use</a>
-            </li>
-            <li>
-                <a href="http://www.creative-tim.com/product/wizard" target="_blank" class="btn btn-info btn-fill">Download, it's free!</a>
-            </li>
-            <li><a></a></li>
-          </ul>
-        </div>
-     </div>
 
 
 </div>

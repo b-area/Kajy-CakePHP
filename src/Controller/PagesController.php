@@ -37,6 +37,8 @@ class PagesController extends AppController
      */
     public function display()
     {
+	    $this->layout = 'sekoly';
+	    
         $path = func_get_args();
 
         $count = count($path);
@@ -51,6 +53,12 @@ class PagesController extends AppController
         if (!empty($path[1])) {
             $subpage = $path[1];
         }
+        
+       
+        if (!empty($page) &&  $page == 'setup') {
+	        $this->layout = 'setup';
+        }
+        
         $this->set(compact('page', 'subpage'));
 
         try {
