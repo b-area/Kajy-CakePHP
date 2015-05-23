@@ -18,6 +18,7 @@ class KilasiesController extends AppController
      */
     public function index()
     {
+        $this->layout = 'sekoly';
         $this->set('kilasies', $this->paginate($this->Kilasies));
         $this->set('_serialize', ['kilasies']);
     }
@@ -45,6 +46,8 @@ class KilasiesController extends AppController
      */
     public function add()
     {
+        $this->layout = 'setup';
+
         $kilasy = $this->Kilasies->newEntity();
         if ($this->request->is('post')) {
             $kilasy = $this->Kilasies->patchEntity($kilasy, $this->request->data);

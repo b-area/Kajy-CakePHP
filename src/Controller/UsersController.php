@@ -18,6 +18,7 @@ class UsersController extends AppController
      */
     public function index()
     {
+        $this->layout = 'sekoly';
         $this->paginate = [
             'contain' => ['Schools']
         ];

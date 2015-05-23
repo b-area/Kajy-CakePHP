@@ -25,113 +25,263 @@
 				  	<form action="" method="">
 				  	<div class="card wizard-card ct-wizard-green" id="wizard">
 
-				  		<!-- Wizard header -->
+				  		
+                    	<!-- **************** WIZARD HEADER ********************* -->
                     	<div class="wizard-header">
 	                    	<h3>
-                        	   <b>BUILD</b> PROFILE <br>
+                        	   CREATE A USER<br>
                         	   <small>This wizard will guide through to create new user.</small>
                         	</h3>
                     	</div>
-                    	
-						<!------------------------------------------>
-                    	<!-- What will go into the wizrd menu bar -->
-                    	<!------------------------------------------>
+                    	<!-- **************** END WIZARD HEADER ********************* -->
+
+
+                    	<!-- **************** WIZARD TAB ********************* -->
                     	<ul>
-                            <li><a href="#name" data-toggle="tab">Name</a></li>
-                            <li><a href="#birth" data-toggle="tab">Birth</a></li>
+                            <li><a href="#personalInfo" data-toggle="tab">Personal Info</a></li>
+                            <li><a href="#contactInfo" data-toggle="tab">Contact Info</a></li>
+                            <li><a href="#emergencyContact" data-toggle="tab">Emergency Contact</a></li>
                             <li><a href="#credentials" data-toggle="tab">Credentials</a></li>
-                            <li><a href="#address" data-toggle="tab">Address</a></li>
                         </ul>
+                    	<!-- **************** END WIZARD TAB ********************* -->
                     	
-                    	<!------------------------->
-                    	<!-- Wizard tab contents -->
-                    	<!------------------------->
+
+                    	<!-- **************** WIZARD CONTENTS ********************* -->
+                    	<!-- Personal Info Tab -->
                     	<div class="tab-content">
-	                    	
-	                    	<! ----- Name Tab --------->
-                            <div class="tab-pane" id="name">
-                                <div class="row">
-	                              
-	                              <h4 class="info-text"> Let's start with the basic information</h4>
-                                  <div class="col-sm-4 col-sm-offset-1">
-                                     <div class="picture-container">
-                                          <div class="picture">
-	                                          <?php echo $this->Html->image('wizard/default-avatar.png', array('class'=>'picture-src', 'id'=> 'wizardPicturePreview')); ?>
-                                              <input type="file" id="wizard-picture">
-                                          </div>
-                                          <h6>Choose Picture</h6>
-                                      </div>
-                                  </div>
-                                  
-                                  <div class="col-sm-6">
-                                      <div class="form-group">
-                                        <label for="exampleInputEmail1">First Name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Andrew...">
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="exampleInputEmail1">Last Name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Smith...">
-                                      </div>
-                                  </div>
+	                        <div class="tab-pane" id="personalInfo">
+	                            <div class="row">
+	                            	<h4 class="info-text"> Let's start with the basic personal info</h4>
+
+	                              	<div class="col-sm-12 col-md-12 col-lg-12 col-sm-offset-1">
+
+	                              		<div class="row">
+	                              			<div class="col-md-5">
+			                              		<!-- First name -->
+												<div class="form-group">
+													<label for="firstname">First Name</label>
+													<input type="text" class="form-control" id="firstname" placeholder="Andrew...">
+												</div>
+											</div>
+											<div class="col-md-5">
+												<!-- Last name -->
+												<div class="form-group">
+													<label for="lastname">Last Name</label>
+													<input type="text" class="form-control" id="lastname" placeholder="Smith...">
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-5">
+												<!-- Date of birth -->
+			                                    <div class="form-group">
+			                                    	<label for="dob">Date of Birth</label>
+			                                    	<input type="text" class="form-control" id="dob" placeholder="Smith...">
+			                                  	</div>
+			                                </div>
+			                                <div class="col-md-5">
+			                                  	<!-- Place of birth -->
+			                                    <div class="form-group">
+			                                        <label for="pob">Place of Birth</label>
+			                                        <input type="text" class="form-control" id="pob" placeholder="Morondava">
+			                                  	</div>
+			                                </div>
+		                                </div>
+
+		                                <div class="row">
+		                                	<div class="col-md-5">
+			                                  	<!-- Gender (male, female) -->
+											  	<div class="form-group">
+			                                        <label class="radio-inline">
+												    	<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Male
+												    </label>
+													<label class="radio-inline">
+												  		<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Female
+													</label>
+			                                  	</div>
+		                                  	</div>
+	                                  	</div>
+
+	                                  	<div class="row">
+
+			                                <div class="col-md-5">
+			                                  	<!-- Role (administrator, staff, teacher, student)-->
+												<div class="form-group">
+													<label>Role</label><br>
+													<select name="role" class="form-control">
+														<option value="Administrator">Administrator</option>
+														<option value="Staff">Staff</option>
+														<option value="Teacher">Teacher</option>
+														<option value="Student">Student</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+	                              	</div> <!-- End div col -->
 	                         	</div> <!-- End div row -->
-                            </div> <!-- End div name -->
-                            <!-- END Name Tab --->
-                            
-                            
-                            <!---- Birth Tab --------->
-                            <div class="tab-pane" id="birth">
-                                <div class="row">
-	                                <h4 class="info-text"> Let's continue with the birth infos</h4>
-									<div class="col-sm-5 col-sm-offset-2">
-										<div class="form-group">
-										  <?php echo $this->Form->input('DOB', array('class' => 'pickdate form-control'));?>
-										       <!-- <span class="help-block">Fagnazavana ..</span> -->
+	                        </div> <!-- End div name -->
+	                        <!-- End Personal Info Tab -->
+	                        
+	                        <!-- Contact info tab -->
+	                        <div class="tab-pane" id="contactInfo">
+	                            <div class="row">
+	                                <h4 class="info-text"> Let's continue with the contact info</h4>
+	                                <div class="col-sm-12 col-md-12 col-lg-12 col-sm-offset-1">
+	                                	<div class="row">
+	                                		<div class="col-md-5">
+				                                <!-- Primary phone -->
+												<div class="form-group">
+													<label for="exampleInputEmail1">Primary Phone</label>
+													<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Andrew...">
+												</div>
+											</div>
+
+	                                		<div class="col-md-5">
+												<!-- Secondary phone -->
+												<div class="form-group">
+													<label for="exampleInputEmail1">Secondary Phone</label>
+													<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Smith...">
+												</div>
+											</div>
 										</div>
-			
-										<div class="form-group">
-										  <?php echo $this->Form->input('POB', array('class' => 'form-control', 'placeholder' => 'Lieu de naissance'));?>
-										       <!-- <span class="help-block">Fagnazavana ..</span> -->
+
+										<div class="row">
+	                                		<div class="col-md-5">
+												<!-- Email address -->
+				                                <div class="form-group">
+				                                	<label for="exampleInputEmail1">Email Address</label>
+				                                	<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Smith...">
+				                              	</div>
+			                              	</div>
+		                              	</div>
+
+		                              	<div class="row">
+	                                		<div class="col-md-5">
+												<!-- Address box -->
+												<div class="form-group">
+													<label for="exampleInputEmail1">Address Line 1</label>
+													<textarea class="form-control span6" row="10" placeholder="Andrew..."></textarea>
+												</div> 
+											</div>              		                              	
+										</div>               		                              	
+
+	                              	</div>
+	                            </div>
+	                        </div>
+							<!-- End contact info Tab -->
+
+	                        
+	                        <!-- Emergency contact tab -->
+	                        <div class="tab-pane" id="emergencyContact">
+	                            <div class="row">
+	                                <h4 class="info-text"> Let's continue with emergency contact info</h4>
+	                                <div class="col-sm-12 col-md-12 col-lg-12 col-sm-offset-1">
+		                                
+		                                <div class="row">
+	                              			<div class="col-md-5">
+			                              		<!-- First name -->
+												<div class="form-group">
+													<label for="firstname">First Name</label>
+													<input type="text" class="form-control" id="firstname" placeholder="Andrew...">
+												</div>
+											</div>
+											<div class="col-md-5">
+												<!-- Last name -->
+												<div class="form-group">
+													<label for="lastname">Last Name</label>
+													<input type="text" class="form-control" id="lastname" placeholder="Smith...">
+												</div>
+											</div>
 										</div>
+
+		                                <div class="row">
+			                                <!-- Primary phone -->
+	                                		<div class="col-md-5">
+												<div class="form-group">
+													<label for="exampleInputEmail1">Primary Phone</label>
+													<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Andrew...">
+												</div>
+											</div>
+
+											<!-- Secondary phone -->
+	                                		<div class="col-md-5">
+												<div class="form-group">
+													<label for="exampleInputEmail1">Secondary Phone</label>
+													<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Smith...">
+												</div>
+											</div>
+										</div>
+
+										<!-- Relationship -->
+										<div class="row">
+											<div class="col-md-5">
+				                                <div class="form-group">
+				                                	<label for="exampleInputEmail1">Relationship</label>
+				                                	<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Smith...">
+				                              	</div>
+			                              	</div>
+		                              	</div>
+
+										<div class="row">
+	                                		<div class="col-md-5">
+												<!-- Address box -->
+												<div class="form-group">
+													<label for="exampleInputEmail1">Address Line 1</label>
+													<textarea class="form-control span6" row="10" placeholder="Andrew..."></textarea>
+												</div> 
+											</div>              		                              	
+										</div> 
+
 										
-										
-									</div>
-                                </div>
-                            </div>
-							<!-- END  Birth Tab ----->
-							
-							<!---- Credentials Tab --------->
-                            <div class="tab-pane" id="credentials">
-                                <div class="row">
-	                                <h4 class="info-text">Let's setup your username and password</h4>
-	                                <div class="col-sm-2">
-	                                </div>
-	                                <div class="col-sm-5">
-		                                <div class="form-group">
-										  <?php echo $this->Form->input('username', array('class' => 'form-control'));?>
-										       <span class="help-block">Fagnazavana ..</span>
+	                            	</div>
+	                            </div>
+	                        </div>
+							<!-- End emergency contact Tab -->
+
+							<!-- Credentials tab -->
+	                        <div class="tab-pane" id="credentials">
+	                            <div class="row">
+	                                <h4 class="info-text"> Let's set up user's credentials</h4>
+	                                <div class="col-sm-12 col-md-12 col-lg-12 col-sm-offset-1">
+	                                	<div class="row">
+		                                	<div class="col-md-5">
+				                                <!-- Username -->
+												<div class="form-group">
+													<label for="exampleInputEmail1">Username</label>
+													<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Andrew...">
+												</div>
+											</div>
 										</div>
-	                                </div>
-						
-									<div class="col-sm-5">
-										<div class="form-group">
-										  <?php echo $this->Form->input('password', array('class' => 'form-control'));?>
-										       <span class="help-block">Fagnazavana ..</span>
+	                                	<div class="row">
+		                                	<div class="col-md-5">
+												<!-- Password -->
+												<div class="form-group">
+													<label for="exampleInputEmail1">Password</label>
+													<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Smith...">
+												</div>
+											</div>
 										</div>
-									</div>
-	                                
-                                </div>
-                            </div>
-							<!-- END  Credentials Tab ----->
-                            
-                            
-                    	</div> 
-                    	<!-- End div wizard tab-content -->
-                    	
-                    	
-                    	
-                    	
-                    	
-                    	<!--- Wizard Footer -->
+	                                	<div class="row">
+		                                	<div class="col-md-5">
+												<!-- Confirm password -->
+				                                <div class="form-group">
+				                                	<label for="exampleInputEmail1">Confirm Password</label>
+				                                	<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Smith...">
+				                              	</div>
+											</div>
+										</div>
+	                              	</div>
+	                            </div>
+	                        </div>
+							<!-- End credentials info Tab -->
+
+                        </div> <!-- End tab-content class -->
+                    	<!-- **************** END WIZARD CONTENTS ********************* -->
+
+
+                    	<!-- **************** WIZARD FOOTER ********************* -->
                     	<div class="wizard-footer">
 	                    	<div class="pull-right">
                             	<input type='button' class='btn btn-next btn-fill btn-success btn-wd btn-sm' 
@@ -145,9 +295,7 @@
                             </div>
                             <div class="clearfix"></div>
                     	</div>
-                    	<!--- END Wizard Footer -->
-                    	
-                    	
+                    	<!-- **************** END WIZARD FOOTER ********************* -->	
                     	
 				  	</div>
 				  	</form>
